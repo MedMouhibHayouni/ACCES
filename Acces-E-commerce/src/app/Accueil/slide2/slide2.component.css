@@ -1,0 +1,208 @@
+.features{
+    margin: 50px 0;
+}
+.features .container{
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(252, 183, 0, 0.7);
+    box-shadow: 5px 5px 10px rgba(245, 111, 85, 0.7);
+    border: 2px solid #0a0a0a;
+
+}
+.features .container .feature-item{
+    width: 18%;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.features .container .feature-item img{
+    width: 100px;
+}
+.features .container .feature-item h4{
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.features .container .feature-item p{
+    font-size: 12px;
+}
+
+
+  /*  div theni eli fih 3 images */ 
+.banner{
+    margin: 50px 0;
+  }
+
+  .banner .container  {
+    display: flex;
+    justify-content:space-between;
+    
+
+  }
+  .banner .container .banner-img{
+    width: 32%;
+    position: relative;
+    box-shadow: 5px 5px 10px #6f6b6b;
+    aspect-ratio: 3 / 2.5;
+
+  }
+
+ .banner .container .banner-img img{
+    width: 100%;
+    aspect-ratio: 3 / 2.5;
+
+ } 
+ .banner .glass-hover{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+ }
+ .banner .glass-hover::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(50deg, transparent 50% ,rgba(255,255,255, 0.1) 60%, rgba(255,255,255, 0.4) 70%, transparent 71%);
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  z-index: 90;
+  transition: 0.8s;
+ }
+
+ .banner .banner-img:hover .glass-hover::after{
+  background-position: -20% 0;
+
+ }
+
+ .banner .banner-img a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+ }
+
+
+ /* --- Responsive Design for .features --- */
+
+/* Écran de taille maximale 1200px (tablettes en paysage) */
+@media screen and (max-width: 1200px) {
+  .features .container {
+    gap: 20px;
+    padding: 10px 15px;
+  }
+  .features .container .feature-item {
+    width: 22%; /* Réduit la largeur des éléments */
+  }
+  .features .container .feature-item img {
+    width: 80px; /* Réduit la taille des images */
+  }
+}
+
+/* Écran de taille maximale 992px (tablettes) */
+@media screen and (max-width: 992px) {
+  .features .container {
+    flex-wrap: wrap; /* Les éléments passent en mode empilement */
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+  .features .container .feature-item {
+    width: 40%; /* Ajuste la largeur pour deux colonnes */
+  }
+  .features .container .feature-item img {
+    width: 70px; /* Réduit davantage la taille des images */
+  }
+  .features .container .feature-item h4 {
+    font-size: 13px; /* Réduit la taille des titres */
+  }
+  .features .container .feature-item p {
+    font-size: 11px; /* Réduit la taille du texte */
+  }
+}
+
+/* Écran de taille maximale 768px (petites tablettes) */
+@media screen and (max-width: 768px) {
+  .features .container .feature-item {
+    width: 48%; /* Chaque élément prend 50% de la largeur */
+  }
+  .features .container {
+    gap: 10px; /* Réduction de l'espacement */
+  }
+}
+
+/* Écran de taille maximale 576px (téléphones) */
+@media screen and (max-width: 576px) {
+  .features .container {
+    flex-direction: column; /* Les éléments s'empilent */
+    gap: 10px;
+  }
+  .features .container .feature-item {
+    width: 100%; /* Les éléments prennent toute la largeur */
+    text-align: center; /* Centrer le contenu */
+  }
+  .features .container .feature-item img {
+    margin: 0 auto; /* Centre les images */
+  }
+}
+
+/* --- Responsive Design for .banner --- */
+
+/* Écran de taille maximale 1200px (tablettes en paysage) */
+@media screen and (max-width: 1200px) {
+  .banner .container {
+    gap: 20px;
+  }
+  .banner .container .banner-img {
+    width: 30%; /* Ajuste la largeur */
+  }
+}
+
+/* Écran de taille maximale 992px (tablettes) */
+@media screen and (max-width: 992px) {
+  .banner .container {
+    flex-wrap: wrap; /* Les images passent en mode empilement */
+    justify-content: center; /* Centre les images */
+    gap: 15px; /* Ajoute un espace entre les images */
+  }
+  .banner .container .banner-img {
+    width: 45%; /* Deux colonnes */
+  }
+}
+
+/* Écran de taille maximale 768px (petites tablettes) */
+@media screen and (max-width: 768px) {
+  .banner .container .banner-img {
+    width: 100%; /* Une image par ligne */
+    margin-bottom: 15px; /* Ajoute de l'espacement entre les images */
+  }
+  .banner .container {
+    gap: 10px;
+  }
+}
+
+/* Écran de taille maximale 576px (téléphones) */
+@media screen and (max-width: 576px) {
+  .banner .container {
+    flex-direction: column; /* Les images s'empilent verticalement */
+    gap: 10px;
+  }
+  .banner .container .banner-img {
+    width: 100%; /* Une image par ligne */
+    box-shadow: 3px 3px 8px #6f6b6b; /* Réduit l'ombre */
+  }
+  .banner .glass-hover::after {
+    background-size: 250% 100%; /* Adapte l'effet aux petits écrans */
+  }
+}
+

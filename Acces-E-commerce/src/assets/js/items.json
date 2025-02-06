@@ -1,0 +1,124 @@
+[
+    {
+      "id": 0,
+      "img": "assets/images/p1.jpg",
+      "img_hover": "assets/images/ph1.jpg",
+      "name": "Original Bio G3",
+      "price": 185,
+      "old_price": 225
+    },
+    {
+      "id": 1,
+      "img": "assets/images/p2.jpg",
+      "img_hover": "assets/images/ph2.jpg",
+      "name": "Original Bio G3",
+      "price": 100,
+      "old_price": 120
+    },
+    {
+      "id": 2,
+      "img": "assets/images/p3.jpg",
+      "img_hover": "assets/images/ph3.jpg",
+      "name": "Original Bio G3",
+      "price": 140,
+      "old_price": 200
+    },
+    {
+      "id": 3,
+      "img": "assets/images/p4.jpg",
+      "img_hover": "assets/images/ph4.jpg",
+      "name": "Original Bio G3",
+      "price": 90,
+      "old_price": 110
+    },
+    {
+      "id": 4,
+      "img": "assets/images/p5.jpg",
+      "img_hover": "assets/images/ph5.jpg",
+      "name": "Original Bio G3",
+      "price": 350,
+      "old_price": 420
+
+    },
+    {
+      "id": 5,
+      "img": "assets/images/p6.jpg",
+      "img_hover": "assets/images/ph6.jpg",
+      "name": "Original Bio G3",
+      "price": 115,
+      "old_price": 235
+    },
+    {
+      "id": 6,
+      "img": "assets/images/p7.jpg",
+      "img_hover": "assets/images/ph7.jpg",
+      "name": "Original BioG3",
+      "price": 225,
+      "old_price": 280
+    },
+    {
+      "id": 7,
+      "img": "assets/images/p8.jpg",
+      "img_hover": "assets/images/ph8.jpg",
+      "name": "Original Bio G3",
+      "price": 150,
+      "old_price": 200
+    },
+    {
+      "id": 8,
+      "img": "assets/images/p9.jpg",
+      "img_hover": "assets/images/ph9.jpg",
+      "name": "Original Bio G3",
+      "price": 180
+    },
+    {
+      "id": 9,
+      "img": "assets/images/p10.jpg",
+      "img_hover": "assets/images/ph10.jpg",
+      "name": "Original Bio G3",
+      "price": 300
+    },
+    {
+      "id": 10,
+      "img": "assets/images/p11.jpg",
+      "img_hover": "assets/images/ph11.jpg",
+      "name": "Original Bio G3",
+      "price": 250
+    },
+    {
+      "id": 11,
+      "img": "assets/images/p12.jpg",
+      "img_hover": "assets/images/ph12.jpg",
+      "name": "Original BioG3",
+      "price": 120
+    },
+    {
+      "id": 12,
+      "img": "assets/images/p13.jpg",
+      "img_hover": "assets/images/ph13.jpg",
+      "name": "Original Bio G3",
+      "price": 90
+    },
+    {
+      "id": 13,
+      "img": "assets/images/p14.jpg",
+      "img_hover": "assets/images/ph14.jpg",
+      "name": "Original Bio G3",
+      "price": 129
+    },
+    {
+      "id": 14,
+      "img": "assets/images/p15.jpg",
+      "img_hover": "assets/images/ph15.jpg",
+      "name": "Original Bio G3",
+      "price": 180
+    },
+    {
+      "id": 15,
+      "img": "assets/images/bio1.jpg",
+      "img_hover": "assets/images/bio2.jpg",
+      "name": "Original Bio G3",
+      "price": 60
+    } 
+
+  ]

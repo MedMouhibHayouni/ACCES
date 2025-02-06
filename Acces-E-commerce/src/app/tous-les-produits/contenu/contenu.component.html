@@ -1,0 +1,226 @@
+
+<div class="top-page">
+ <div class="container"> 
+   <h1> Découvrez Nos Saveurs Traditionnelles Authentiques </h1>
+   <p>Plongez dans l'univers des délices culinaires traditionnels avec notre sélection de produits alimentaires soigneusement préparés. Que vous recherchiez des épices rares, des conserves artisanales ou des confiseries d'antan, nos filtres vous permettent de trouver exactement ce qu'il vous faut. Explorez notre gamme et laissez-vous séduire par le goût unique du patrimoine gastronomique local et régional. </p>
+ </div> 
+
+</div>
+
+
+<section class="tous-produits">
+ <div class="container">
+  
+
+ <div class="filter">
+   <h2> Filter </h2>
+   
+   <div class="filter-item">
+    <h4>Category</h4>
+
+    <div class="container">
+
+      <span> Bio </span>
+       <input type="checkbox" (change)="toggleCategory('Bio', $event)">
+
+     <div class="item">
+      <span> Cosmétiques </span>
+      <input type="checkbox" (change)="toggleCategory('Cosmetiques', $event)">
+     </div>
+
+     <div class="item">
+       <span> Pâtes & Couscous </span>
+       <input type="checkbox" (change)="toggleCategory('Pâtes & Couscous', $event)">
+     </div>
+
+     <div class="item">
+      <span> Huiles d'olive </span>
+      <input type="checkbox" (change)="toggleCategory('Huiles d\'olive', $event)">
+     </div>
+
+     <div class="item">
+       <span> Miels </span>
+       <input type="checkbox" (change)="toggleCategory('Miels', $event)">
+     </div>
+
+    </div>
+   </div>
+
+
+
+    
+   <div class="filter-item">
+    <h4>Brand</h4>
+    <div class="container">
+
+     <div class="item">
+       <span> Ben Yaghlane </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Saïda </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Les Moulins Mahjoub </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> El Baraka </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> senitna </span>
+       <input type="checkbox">
+     </div>
+
+    </div>
+   </div>
+
+    
+   
+
+    
+   <div class="filter-item">
+    <h4>Origine ou région</h4>
+    <div class="container">
+
+     <div class="item">
+       <span> Produits du kassrine </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Produits du Sahel </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Produits du Sud tunisien </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Produits artisanaux du Cap Bon </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Kairouan </span>
+       <input type="checkbox">
+     </div>
+
+    </div>
+   </div>
+
+    
+   <div class="filter-item">
+    <h4>Prix ou budget</h4>
+    <div class="container">
+
+     <div class="item">
+       <span> Moins de 10 TND </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Entre 10 TND et 50 TND </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Plus de 50 TND </span>
+       <input type="checkbox">
+     </div>
+
+     <div class="item">
+       <span> Plus de 100 TND </span>
+       <input type="checkbox">
+     </div>
+
+     
+
+    </div>
+   </div>
+
+    
+  
+
+    
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+  <div class="produits-dev">
+
+   
+    <div id="produits-sale" class="produits">
+<div *ngFor="let produit of produitsFiltres" class="produit">
+      <span class="solde">
+        {{ ((produit.old_price - produit.prix) / produit.old_price * 100).toFixed(0) }}%
+      </span>
+      <div class="like">
+        <!-- Bouton pour ajouter au panier -->
+        <span class="sp1" (click)="addToCart(produit)">
+          <i class="bi bi-cart-plus-fill"></i>
+        </span>
+        <span class="sp2">
+          <i class="bi bi-heart-fill"></i>
+        </span>
+        <span class="sp3">
+        <i class="bi bi-arrows-angle-expand" [routerLink]="['/page-principal-detail-produits', produit.id]"></i>
+        </span>
+      </div>
+      <div class="img-produit">
+        <img src="{{ produit.image }}" alt="Produit">
+        <img class="img-haver" src="{{ produit.img_hover }}" alt="Haver Produit">
+        <h3 class="nome-produit">
+          <a href="#">{{ produit.nom }}</a>
+        </h3>
+        <p><strong>category:</strong> {{ produit.category }}</p>
+        <p><strong>Origine:</strong> {{ produit.origine }}</p>
+        <p><strong>Brand:</strong> {{ produit.brand }}</p>
+        <div class="stars">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        <div class="prix">
+          <p>
+            <span class="sp1">{{ produit.prix }} <span class="sp2">DT</span></span>
+          </p>
+          <p class="prix-ancien">
+            <span class="sp1">{{ produit.old_price }} <span class="sp2">DT</span></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+  </div>
+
+ </div>
+ <ul class="pagination">
+  <li class="page-item1"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item1"><a class="page-link" href="#">Next</a></li>
+</ul>
+</section>
+

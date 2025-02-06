@@ -1,0 +1,129 @@
+.item-detail{
+    background-color: #fff;
+    padding: 50px 0;
+
+}
+.item-detail .container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.item-detail .img-item{
+   width: 40%;
+   aspect-ratio: 7 / 9;
+}
+
+.item-detail .img-item .big-img img{
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    aspect-ratio: 7 / 9;
+}
+
+.item-detail .img-item .sm-imgs {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 60px;
+    gap: 20px;
+}
+.item-detail .img-item .sm-imgs img{
+    width: 22%;
+}
+
+
+.item-detail .details-item{
+    width: 55%;
+    
+    align-content: center;
+}
+
+.item-detail .details-item h1{
+    margin-bottom: 30px;
+}
+
+.item-detail .details-item h5{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.item-detail .details-item h5 span{
+    color: #fcb700;
+}
+
+
+
+
+
+.item-detail .details-item .prix{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-top: 7px;
+}
+
+.item-detail .details-item .prix p {
+    color: #fcb700;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+
+.item-detail .details-item .prix .prix-ancien{
+    color: #ff4d29;
+    text-decoration: line-through;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.item-detail .details-item .parg{
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.item-detail .details-item h4{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.item-detail .details-item button{
+    background: #ffbb00;
+    color: #fff;
+    font-weight: bold;
+    margin: 30px 0;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height:  5%;
+    width: 27%;
+    transition: 0.5s;
+}
+
+.item-detail .details-item button:hover {
+   scale: 1.2;
+   color: #fd034ef9;
+}
+
+.item-detail .details-item button:hover i{
+    color: beige;
+}
+
+.item-detail .details-item button i{
+   color: #fd034ef9;
+   font-size: 25px;
+   margin-left: 9px;
+   transition: 0.3s;
+}
+
+
+
+.stars{
+    color: #fdb500;
+    margin: 3px ;
+}

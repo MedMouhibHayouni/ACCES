@@ -1,0 +1,34 @@
+<section class="signin sec-form">
+  <div class="form-container">
+    <p class="title">Welcome back!</p>
+
+    <form class="form" action="">
+      <input class="inp" type="email" principal="Email" />
+      <input class="inp" type="password" principal="password" />
+      <p class="page-link">
+        <a href="#" class="label">Forgot Password?</a>
+      </p>
+
+      <button class="form-btn">Login</button>
+    </form>
+
+    <p class="sing-up-label">
+      Don't have an account?
+  <a class="sing-up-link" [routerLink]="['/sing-up']">Sign up</a>
+  
+
+    </p>
+
+    <div class="button-container">
+      <div class="apple-login-button">
+        <i class="bi bi-apple"></i>
+        <span>Login with Apple</span>
+      </div>
+
+      <div class="google-login-button">
+        <i class="bi bi-google"></i>
+        <span>Login with Google</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<section class="slide slide-sold">
+  <div class="container">
+    <div class="sold-sec">
+      <div class="top-slide">
+        <h2>Les Produits <span> Bio</span></h2>
+        <img src="assets/images/sol.png" alt="Sold Image">
+      </div> 
+    </div>
+
+    <div class="carts-produits-bio swiper mySwiper">
+      <div id="swiper_items_sale" class="produits swiper-wrapper">
+        <!-- Utiliser ng-container pour la boucle et ngIf -->
+        <ng-container *ngFor="let produit of produits">
+          <div *ngIf="produit.category.toLowerCase() === 'bio'" class="produit swiper-slide">
+            <div class="like">
+              <!-- Bouton pour ajouter au panier -->
+              <span class="sp1" (click)="addToCart(produit)">
+                <i class="bi bi-cart-plus-fill"></i>
+              </span>
+              <span class="sp2"><i class="bi bi-heart-fill"></i></span>
+              <span class="sp3"><i class="bi bi-arrows-angle-expand" [routerLink]="['/page-principal-detail-produits', produit.id]"></i></span>
+            </div>
+            <div class="img-produit">
+              <img src="{{ produit.image }}" alt="Produit">
+              <img class="img-haver" src="{{ produit.img_hover }}" alt="Haver Produit">
+              
+              <!-- Ajouter les informations budget, origine et brand -->
+              <div class="product-info">
+                <h3 class="nome-produit">
+                  <a href="#">{{ produit.nom }}</a>
+                </h3>
+                <p><strong>category:</strong> {{ produit.category }}</p>
+                <p><strong>Origine:</strong> {{ produit.origine }}</p>
+                <p><strong>Brand:</strong> {{ produit.brand }}</p>
+              </div>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="prix">
+                <p><span class="sp1">{{ produit.prix }} <span class="sp2">DT</span></span></p>
+                
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

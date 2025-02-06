@@ -1,0 +1,140 @@
+
+
+
+  /*  div theni eli fih 3 images */ 
+.banner{
+    margin: 50px 0;
+    margin-bottom: 50px;
+    
+  }
+
+  .banner .container  {
+    display: flex;
+    justify-content:space-between;
+    width: auto;
+
+    
+
+  }
+  .banner .container .banner-img{
+    width: 49%;
+    position: relative;
+    box-shadow: 5px 5px 10px #6f6b6b;
+    aspect-ratio: 5 / 2.5;
+
+  }
+
+ .banner .container .banner-img img{
+    width: 100%;
+    aspect-ratio: 5 / 2.5;
+
+
+ } 
+ .banner .glass-hover{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+ }
+ .banner .glass-hover::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(50deg, transparent 50% ,rgba(255,255,255, 0.1) 60%, rgba(255,255,255, 0.4) 70%, transparent 71%);
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  z-index: 90;
+  transition: 0.8s;
+ }
+
+ .banner .banner-img:hover .glass-hover::after{
+  background-position: -20% 0;
+
+ }
+
+ .banner .banner-img a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+ }
+
+
+ /* --- Responsive Design for .banner --- */
+
+/* Écran de taille maximale 1200px (tablettes en paysage) */
+@media screen and (max-width: 1200px) {
+  .banner .container {
+    flex-wrap: wrap; /* Permet d'empiler les images si nécessaire */
+    gap: 20px; /* Ajoute un espacement entre les éléments */
+  }
+  .banner .container .banner-img {
+    width: 48%; /* Réduit légèrement la largeur */
+  }
+}
+
+/* Écran de taille maximale 992px (tablettes) */
+@media screen and (max-width: 992px) {
+  .banner .container {
+    flex-wrap: wrap; /* Les images s'empilent si l'espace est insuffisant */
+    justify-content: center; /* Centre les images sur l'écran */
+    gap: 15px; /* Espacement entre les éléments */
+  }
+  .banner .container .banner-img {
+    width: 100%; /* Les images prennent toute la largeur */
+  }
+  .banner {
+    margin: 30px 0; /* Réduit les marges en haut et en bas */
+  }
+}
+
+/* Écran de taille maximale 768px (petites tablettes) */
+@media screen and (max-width: 768px) {
+  .banner .container .banner-img {
+    aspect-ratio: auto; /* Supprime l'aspect fixe pour s'adapter */
+    box-shadow: 3px 3px 8px #6f6b6b; /* Réduit l'ombre */
+  }
+  .banner .container {
+    gap: 10px; /* Réduit l'espacement entre les éléments */
+  }
+}
+
+/* Écran de taille maximale 576px (téléphones) */
+@media screen and (max-width: 576px) {
+  .banner {
+    margin: 20px 0; /* Réduit encore les marges */
+  }
+  .banner .container {
+    flex-direction: column; /* Les images s'empilent verticalement */
+    align-items: center; /* Centre les images */
+    gap: 10px; /* Ajoute un léger espacement vertical */
+  }
+  .banner .container .banner-img {
+    width: 100%; /* Chaque image occupe toute la largeur */
+    box-shadow: 2px 2px 5px #6f6b6b; /* Réduction de l'ombre */
+  }
+  .banner .glass-hover::after {
+    background-size: 250% 100%; /* Adapte la taille de l'effet */
+  }
+}
+
+/* Écran de taille maximale 400px (petits téléphones) */
+@media screen and (max-width: 400px) {
+  .banner {
+    margin: 10px 0; /* Marges très réduites pour économiser l'espace */
+  }
+  .banner .container .banner-img {
+    width: 100%;
+    box-shadow: none; /* Supprime l'ombre pour un design plus léger */
+  }
+  .banner .glass-hover::after {
+    background-size: 300% 100%; /* Augmente l'effet pour un petit écran */
+  }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+body {
+    font-family: "Barlow", sans-serif;
+    line-height: 1.7;
+    color: #516171;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700 !important;
+    color: #092032;
+
+}
+
+a{
+    color: #092032;
+    
+    
+}
+img{
+    width: 100%;
+}
+.section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.sec-title{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    
+}
+
+.sec-sub-title{
+    text-transform: uppercase;
+    display: inline-block;
+    background-color:#f3f3f5;
+    box-shadow: 9px 9px 12px #e4e4e4, -9px -9px 12px #ffffff;
+    padding: 3px 20px;
+    border-radius: 60px;
+    color: #ff8243;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.sec-sub-title:hover{
+    background-color: #ff4d29 !important;
+    color: #ffffff;
+}
+
+.h2-title{
+    font-size: 46px;
+    line-height: 56px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    position:relative;
+    text-align: center;
+    
+    
+}
+.h2-title span{
+    display: block;
+}
+.about-video-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 55vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgb(36, 39, 37 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-btn{
+    width: 80px;
+    height: 80px;
+    background: #f3f3f5;
+    box-shadow: 9px 9px 12px #e4e4e4, -9px -9px 12px #ffffff;
+
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: 0.5s;
+    vertical-align: middle;
+    z-index: 2;
+    padding-left: 4px;
+    padding-top: 4px;
+    font-size: 40px;
+    color: #ff8243;
+}
+.play-btn:hover{
+    box-shadow: inset 9px 9px 12px #cccccc, inset -9px -9px 12px #ffffff;
+
+}
+.play-btn-wp{
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-btn-wp span{
+    margin-left: 20px;
+    font: size 20px;
+    font-weight: bold;
+    color: #bfbfbf;
+
+}

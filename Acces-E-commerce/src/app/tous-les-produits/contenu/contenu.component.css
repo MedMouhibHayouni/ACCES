@@ -1,0 +1,257 @@
+
+.top-page{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.top-page h1{
+    font-size: 40px;
+     color: #fcb700;
+     margin-bottom: 25px;
+}
+
+.top-page p{
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+    color: rgb(59, 57, 57);
+
+}
+
+.tous-produits .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.tous-produits .container .filter{
+    background: #eae8e8;
+    width: 350px;
+    height: 1200px;
+    text-transform: capitalize;
+    padding: 20px 25px;
+    border: 10x solid rgb(14, 14, 13);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    transition: 0.4s;
+    
+}
+.tous-produits .container .filter:hover{
+    scale: 1.1;
+}
+
+.filter-item .container{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 40px;
+} 
+
+.tous-produits .container .filter-item h4{
+    border-bottom: 1px solid #0c0c0c;
+    color: #ff4d29;
+    padding:  10px;
+    font-weight: bold;
+    font-size: 22px;
+
+    
+}
+.filter-item .item span{
+    font-size: 14px;
+    cursor: pointer;
+    left: 0;
+    position: relative;
+}
+.filter-item .item span:hover{
+    font-size: 17px;
+    cursor: pointer;
+    left: 5px;
+    color: #52d400;
+    font-weight: bold;
+}
+
+.filter-item .item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+
+.filter h2{
+    color: #fcb700;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tous-produits .container .produits-dev  .produits{
+    height: auto; 
+    gap: 15px;
+    width: 900px;  
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+     
+}
+
+ .produits .produit {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #bebcbc;
+    border-radius: 5px;
+    width: 32%; 
+    margin-bottom: 20px;  
+}
+
+
+.produit .img-produit{
+    position: relative;
+}
+.produit .img-produit img{
+    width: 100%;
+    transition: 0.4s ease-in-out ;
+    aspect-ratio: 5 / 6;
+}
+.produit .img-produit .img-haver{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    scale: 0.2;
+    aspect-ratio: 5 / 6;
+}
+
+
+.produit:hover .img-produit .img-haver{
+    opacity: 1;
+    scale: 1;
+}
+
+
+.produits .produit .nome-produit{
+    font-size: 20px;
+}
+.produits .produit .nome-produit a{
+    color: black;
+}
+.produits .stars i{
+    color: #fcb700;
+    margin: 3px ;
+}
+.prix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.prix p span {
+    color: #fcb700;
+    font-weight: bold;
+    font-size: 20px;
+}
+.prix .prix-ancien{
+    color: #ff4d29;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+.produit .solde{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 2;
+    background-color: #ff4d29;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 13px;
+    transition: 0.4s ease;
+}
+
+
+.produit .like{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position:absolute;
+    right: -40px;
+    z-index: 3;
+    top: 30%;
+    transform: translateY(10%);
+    font-size: 30px;
+    transition: 0.4s ease;
+}
+.produit .like i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgba(252, 185, 0, 0.644);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.produit .like .sp1 :hover{
+    color: #0c0c0c;
+    font-size: 28px;
+    border-radius: 10%;
+    background-color: #fcb700;
+}
+.produit .like .sp2 :hover{
+    color: #ff4d29;
+    font-size: 28px;
+    border-radius: 10%;
+    background-color: #fcb700;
+    
+}
+.produit:hover .like{
+    right: 25px;
+}
+.produit:hover .solde{
+    color: #fff;
+    background-color: #fcb700;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5px 13px;
+}
+
+  
+
+
+.pagination{
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.pagination .page-item1{
+    width: 100px;
+    height: 70px;
+}
+.pagination .page-item{
+    width: 50px;
+    height: 70px;
+}

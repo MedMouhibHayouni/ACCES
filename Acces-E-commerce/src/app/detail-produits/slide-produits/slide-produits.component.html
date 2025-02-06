@@ -1,0 +1,44 @@
+<section class="slide slide-sold">
+  <div class="container">
+    <div class="sold-sec">
+      <div class="top-slide">
+        <h2>Les Produits <span> en solde</span></h2>
+        <img src="assets/images/sol.png" alt="Sold Image">
+      </div> 
+    </div>
+
+    <div class="carts-produits-solde swiper mySwiper">
+      <div id="swiper_items_sale" class="produits swiper-wrapper">
+        <div *ngFor="let produit of produits" class="produit swiper-slide">
+          <span class="solde">{{ ((produit.old_price - produit.price) / produit.old_price * 100).toFixed(0) }}%</span>
+          <div class="like">
+            <!-- Bouton pour ajouter au panier -->
+            <span class="sp1" (click)="addToCart(produit)"><i class="bi bi-cart-plus-fill"></i></span>
+            <span class="sp2"><i class="bi bi-heart-fill"></i></span>
+          </div>
+          <div class="img-produit">
+            <img src="{{ produit.img }}" alt="Produit">
+            <img class="img-haver" src="{{ produit.img_hover }}" alt="Haver Produit">
+            <h3 class="nome-produit">
+              <a href="#">{{ produit.name }}</a>
+            </h3>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="prix">
+              <p><span class="sp1">{{ produit.price }} <span class="sp2">DT</span></span></p>
+              <p class="prix-ancien"><span class="sp1">{{ produit.old_price }} <span class="sp2">DT</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

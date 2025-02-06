@@ -1,0 +1,299 @@
+
+body {
+    font-family: "Barlow", sans-serif;
+    line-height: 1.7;
+    color: #516171;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700 !important;
+    color: #092032;
+
+}
+
+a{
+    color: #092032;
+    
+    
+}
+img{
+    width: 100%;
+}
+
+.bg-cover{
+   background-position: center ;
+   background-size: cover;
+   background-position: center ;
+}
+
+.top-nav{
+    background-color:#ff4d29;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.top-nav i, .top-nav span {
+    vertical-align: middle;
+}
+
+.top-nav p{
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 16px;
+    color: #ffffff;
+}
+.social-links a {
+    width: 34px;
+    height: 34px;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: o.3s ease;
+
+}
+
+
+.social-links a:hover {
+    color: #ff4d29;
+    background-color: #ffffff;
+}
+.navbar{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active
+{
+ color: #ff4d29;
+}
+
+
+/* Animation de surbrillance sous les éléments de navigation */
+.collapse ul li {
+    position: relative; /* Positionnement relatif pour le pseudo-élément ::after */
+}
+
+.collapse ul li::after {
+    content: ''; /* Permet de créer un pseudo-élément */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%; /* Initialement invisible */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #ff4d29; /* Couleur de la ligne */
+    transition: width 0.3s ease-in-out; /* Animation fluide */
+}
+
+.collapse ul li:hover::after {
+    width: 100%; /* Ligne complète lors du survol */
+}
+
+
+
+
+.navbar-brand{
+    font-weight: 700;
+    font-size: 26px;
+}
+.navbar-brand .s1{
+    color: #ff4d29;
+    
+}
+.btn{
+    padding: 9px 24px;
+    font-weight: 500;
+}
+.btn-brand{
+    background-color: #ff4d29;
+    color: #ffffff;
+    border-color: #ff4d29;
+}
+.btn-brand:hover{
+    color: #ffffff;
+    background-color: #d83f21;
+}
+body.cart-open {
+    overflow: hidden;
+  }
+  
+  /* icons eli mawjouda f e5er navbar*/
+  .container .cart-header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .container .cart-header i{
+    width: 40px;
+    height: 40px;
+    color: #092032;
+    font-size: 20px;
+    background-color: rgba(186, 183, 183, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: o.3s ease;
+    margin-bottom: 5px;
+  }
+  .container .cart-header i:hover{
+    background-color: #fcb700;
+    color: #ffffff;
+  }
+  .container .cart-header .icon-cart{
+    position: relative;
+  }
+  .container .cart-header .count-item{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    color: #092032;
+    font-size: 13px;
+    background-color: #fcb700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transform: o.3s ease;
+    top: -5px;
+    right: -6px;
+    
+  }
+  
+
+
+
+
+
+/* Cart  #fcb700*/
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 1100;
+    padding: 30px;
+    border-left: 5px solid  #fcb700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+} 
+.cart{
+    display: none;
+}
+.cart.active{
+    display: flex;
+}
+/* top-cart */
+.cart .top-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.cart .top-cart .close-cart i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.cart .top-cart .close-cart i:hover{
+    color: #d83f21;
+}
+
+.cart .top-cart h3{
+    font-size: 25px;
+    color: #e6ad0f;
+    font-weight: bold;
+}
+.cart .top-cart h3 span{
+    font-size:  28px;
+    color: #ff4d29;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cart .items-in-cart{
+    padding: 20px 0;
+    border-block: 1px solid  #fcb700;
+    margin-block: 20px;
+    height: 100%;
+}
+.cart .bottom-cart .total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.cart .bottom-cart .total .price-cart-total{
+    color:#ff4d29;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cart .bottom-cart .total p{
+    color: #fcb700;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* button  eli mawjouda f e5er cart*/
+
+.cart .button-cart{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart .button-cart .btn-cart{
+    border: 2px solid #fcb700;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #fcb700;
+    transition: 0.3s ease;
+    
+}
+.cart .button-cart .btn-cart:hover{
+    background: transparent;
+}
+.cart .button-cart .trans-bg{
+    background: transparent;
+}
+.cart .button-cart .trans-bg:hover{
+    background: #fcb700;
+}
+
+
+/* contunu mta3 cart*/
+.cart .item-cart{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+
+.cart .item-cart img{
+    width: 100px;
+}
+.cart .item-cart h4{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+/* na7it border w outline eli jew par defau m3a icons*/
+.cart .item-cart .delete-item {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+
+.cart .item-cart .delete-item :hover{
+    color: #d83f21;
+
+}
+

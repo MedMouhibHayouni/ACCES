@@ -1,0 +1,101 @@
+   <nav class="top-nav">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            
+            <p>
+           <i class="bi bi-envelope-fill"></i> <span>aymengmail.com</span>
+           </p>
+
+            
+            <p>
+              <i class="bi bi-telephone-fill"></i> <span>(216) 28453774</span>
+            </p>
+          </div>
+          <div class="col-auto ms-auto">
+            <div class="social-links">
+              <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/images/logo.png" alt="Logo" width="45" height="50" class="me-2 rounded-circle">
+          <span> ACCES <span class="s1">E-commerce</span> </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a  class="nav-link " aria-current="page" href="#" [routerLink]="['/page-principal']">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notre histoire</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produits</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recettes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pack </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boutiques</a>
+            </li>
+          </ul>
+          <a  href="#" class="btn btn-brand ms-lg-3">  Login  <i class="bi bi-box-arrow-in-right"></i></a>  
+        </div>
+        <div class="cart-header">
+          <div class="icon-cart"> 
+           <i (click)="openCart()" class="bi bi-cart3"></i>
+          <!-- 3adad montajet eli bech techrehom -->
+           <span class="count-item">{{ cartItems.length }}</span>
+          </div>
+        </div>  
+      </div>
+      
+    </nav>
+
+  <div class="cart" #cart>
+  <div class="top-cart">
+    <h3> My cart <span> {{ cartItems.length }}</span> </h3>
+    <span class="close-cart"> <i (click)="closeCart()" class="bi bi-x-circle"></i> </span>
+  </div>
+  <!-- Contenu principal du panier -->
+  <div class="items-in-cart">
+  <div *ngFor="let item of cartItems; let i = index" class="item-cart">
+    <img [src]="item.img" alt="Produit">
+    <div class="content">
+      <h4>{{ item.name }}</h4>
+      <p class="price-cart">{{ item.price }} DT</p>
+    </div>
+    <button (click)="removeItem(i)" class="delete-item">
+      <i class="bi bi-trash"></i>
+    </button>
+  </div>
+</div>
+
+  <!-- Section inférieure -->
+  <div class="bottom-cart">
+    <div class="total">
+      <p> Toltal </p>
+      <p class="price-cart-total">{{ getTotalPrice() }} DT</p>
+    </div>
+    <div class="button-cart">
+      <a href="#" class="btn-cart">Proceed to checkout</a>
+      <button class="btn-cart trans-bg">Shop more</button>
+    </div>
+  </div>
+</div>

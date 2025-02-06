@@ -1,0 +1,177 @@
+.top-slide{
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 2px solid #59de5e;
+    
+}
+.top-slide img{
+    margin-left: 30px;
+    width: 60px ;
+    height: 40px;
+    
+}
+.top-slide::after{
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #47d24c;
+}
+
+.top-slide h2{
+    text-transform: capitalize;
+    color: #fcb700;
+}
+.top-slide h2 span{
+    font-weight: normal;
+    color: #00fc0d;
+}
+
+.produit {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #bebcbc;
+    border-radius: 5px;
+    width: 50%;
+}
+.produit .img-produit{
+    position: relative;
+}
+.produit .img-produit img{
+    width: 100%;
+    transition: 0.4s ease-in-out ;
+    aspect-ratio: 5 / 6;
+}
+.produit .img-produit .img-haver{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    scale: 0.2;
+    aspect-ratio: 5 / 6;
+}
+
+
+.produit:hover .img-produit .img-haver{
+    opacity: 1;
+    scale: 1;
+}
+
+
+.produits .produit .nome-produit{
+    font-size: 20px;
+}
+.produits .produit .nome-produit a{
+    color: black;
+}
+.produits .stars i{
+    color: #fcb700;
+    margin: 3px ;
+}
+.prix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.prix p {
+    color: #fcb700;
+    font-weight: bold;
+    font-size: 20px;
+}
+.prix .prix-ancien{
+    color: #ff4d29;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+.produit .solde{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 2;
+    background-color: #ff4d29;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 13px;
+    transition: 0.4s ease;
+}
+
+
+.produit .like{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position:absolute;
+    right: -40px;
+    z-index: 3;
+    top: 30%;
+    transform: translateY(10%);
+    font-size: 30px;
+    transition: 0.4s ease;
+}
+.produit .like i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgba(252, 185, 0, 0.644);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.produit .like .sp1 :hover{
+    color: #0c0c0c;
+    font-size: 28px;
+    border-radius: 10%;
+    background-color: #fcb700;
+}
+.produit .like .sp2 :hover{
+    color: #ff4d29;
+    font-size: 28px;
+    border-radius: 10%;
+    background-color: #fcb700;
+    
+}
+.produit:hover .like{
+    right: 25px;
+}
+.produit:hover .solde{
+    color: #fff;
+    background-color: #fcb700;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5px 13px;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+ 
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: auto;
+   
+  }
+  
